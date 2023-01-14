@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  font-size: 18px;
+}
+
+main {
+  background-color: hsl(27deg, 66%, 92%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expense-container {
+  display: grid;
+  gap: 25px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(10deg, 79%, 65%);
+  color: hsl(33deg, 100%, 98%);
+  padding: 30px;
+  border-radius: 15px;
+}
+.top-section .left-side > p:first-of-type {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+.top-section .left-side > p:last-of-type {
+  font-size: 1.75em;
+  font-weight: 700;
+}
+
+.bottom-section {
+  background-color: hsl(33deg, 100%, 98%);
+  padding: 35px;
+  border-radius: 15px;
+}
+.bottom-section h1 {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 1.75em;
+}
+.bottom-section .chart-container {
+  display: flex;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: hsl(27deg, 66%, 92%);
+  padding: 17px 0px 30px 0px;
+  margin-bottom: 35px;
+  justify-content: space-around;
+}
+.bottom-section .chart-container .bar-graph {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bottom-section .chart-container .bar-graph .bar {
+  width: 50px;
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bottom-section .chart-container .bar-graph .amount {
+  color: hsl(33deg, 100%, 98%);
+  background-color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  opacity: 0;
+  font-size: 0.9em;
+}
+.bottom-section .chart-container .bar-graph p:first-of-type {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 0.85em;
+  margin-top: 10px;
+}
+.bottom-section .chart-container .bar:hover {
+  opacity: 0.6;
+}
+.bottom-section .chart-container .bar:hover ~ .amount {
+  opacity: 1;
+}
+.bottom-section .expense-summary .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(25deg, 47%, 15%);
+}
+.bottom-section .expense-summary .flex-container .right-side {
+  text-align: right;
+  color: hsl(28deg, 10%, 53%);
+}
+.bottom-section .expense-summary .flex-container .right-side > p:first-of-type {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}
+.bottom-section .expense-summary .flex-container > p {
+  font-weight: 700;
+  font-size: 2.65em;
+}
+.bottom-section .expense-summary > p {
+  color: hsl(28deg, 10%, 53%);
+}
+
+@media screen and (max-width: 590px) {
+  .bottom-section {
+    padding: 25px 20px;
+  }
+  .bottom-section h1 {
+    font-size: 1.3em;
+  }
+  .bottom-section .chart-container {
+    margin-bottom: 25px;
+  }
+  .bottom-section .chart-container .bar-graph .bar {
+    width: 33px;
+  }
+  .bottom-section .chart-container .bar-graph .amount {
+    font-size: 0.5em;
+  }
+  .bottom-section .chart-container .bar-graph p:first-of-type {
+    font-size: 0.7em;
+  }
+  .bottom-section .expense-summary .flex-container > p {
+    font-size: 1.65em;
+  }
+  .bottom-section .expense-summary .flex-container .right-side > p:last-of-type {
+    font-size: 0.85em;
+  }
+  .bottom-section .expense-summary .flex-container .right-side > p:first-of-type {
+    font-size: 0.85em;
+  }
+  .bottom-section .expense-summary > p {
+    font-size: 0.85em;
+  }
+  .top-section {
+    padding: 25px;
+  }
+  .top-section .left-side > p:last-of-type {
+    font-size: 1.3em;
+  }
+  .top-section .left-side > p:first-of-type {
+    font-size: 0.85em;
+  }
+}/*# sourceMappingURL=style.css.map */
